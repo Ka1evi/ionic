@@ -1,0 +1,45 @@
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ionic start</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--引入网站图标-->
+    <link href="icon/favicon.ico" rel="icon">
+    <!--引入ionic内置css-->
+    <link href="css/ionic.min.css" rel="stylesheet">
+    <!--引入自己定义的css-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--引入实现js动态加载与依赖注入的js-->
+    <script src="js/util/script.js"></script>
+    <!--引入管理不同环境下模块路径的js-->
+    <script src="js/config/url.js"></script>
+    <!--引入juery-->
+    <script src="js/jquery/jquery-3.2.1.min.js"></script>
+    <!--引入ionic和angularJS合并打包的js-->
+    <script src="js/ionic/ionic.bundle.min.js"></script>
+    <!--引入angular动态加载模块组件-->
+    <script src="js/util/ocLazyLoad.min.js"></script>
+    <!--引入socket.io-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.js"></script>
+    <!--引入图表插件-->
+    <script src="js/echarts/echarts.min.js"></script>
+    <!--引用混合式app需要用到的js-->
+    <script src="js/ionic/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!--引用配置及自定义的js-->
+    <script src="js/config/app.js"></script>
+    <script src="js/config/router.js"></script>
+
+</head>
+
+<body>
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<ion-view view-title="用例列表">
+    <ion-content on-scroll="getScrollPosition()" delegate-handle="ScrollToTop">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="refreshUseCase()"></ion-refresher>
+        <ion-list>
+            <div ng-repeat="useCase in useCaseList">
+                <ion-item ng-click="toggleGroup(useCase)"
+                          ng-class="{active: isGroupShown(useCase)}">
+                    <i class="icon" ng-class="isGroupShown(useCase) ? 'ion-minus' : 'ion-plus'"></i>
+                    &nbsp;{{useCase.name}}
+                    <ion-option-button class="button-balanced" ng-click="testRecord(useCase.id)">执行记录
+                    </ion-option-button>
+                </ion-item>
+                <ion-item class="item-accordion item-text-wrap"
+                          ng-show="isGroupShown(useCase)">
+                    <p><b>请求数据</b>：{{useCase.data}}</p>
+                    <p><b>检查点</b>：{{useCase.check}}</p>
+                    <p><b>用例详情</b>：{{useCase.desc}}</p>
+                    <p><b>主机ip</b>：{{useCase.ip}}</p>
+                    <p><b>请求URL</b>：{{useCase.url}}</p>
+                    <p><b>请求方法</b>：{{useCase.method}}</p>
+                    <p><b>请求类型</b>：{{useCase.type}}</p>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+    <div class="scrollToTop" ng-click="scrollTop()"></div>
+</ion-view>
+

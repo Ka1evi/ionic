@@ -1,0 +1,47 @@
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+
+/*config Echart size*/
+.chart-config {
+    width: 300px;
+    height:300px;
+}
+
+/*tips*/
+.tips-danger {
+    color: #ff0000;
+}
+
+.tips-success {
+    color: #5cb85c;
+}
+
+/*create collapsed list*/
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.05s all linear;
+}
+.list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+
+/*create scroolToTop button*/
+.scrollToTop{
+    height: 48px;
+    width: 48px;
+
+    position: fixed;
+    bottom: 12%;
+    right: 8%;
+    z-index: 1000;
+    display:none;
+    background:url('../img/back-to-top.png') no-repeat;
+}

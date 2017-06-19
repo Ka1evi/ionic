@@ -1,0 +1,16 @@
+<ion-view view-title="测试详情">
+    <ion-content class="padding">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="refreshResult()"></ion-refresher>
+        <div class="list card">
+            <div class="item">
+                <p><b>项目描述</b></p>
+                <p>{{peojectDesc}}</p>
+            </div>
+            <div class="item item-body">
+                <p><b>测试结果分析</b></p>
+                <div id="projectChart" class="chart-config"></div>
+                <p>成功次数：<span>{{data[0]}}</span>&emsp;失败次数：<span>{{data[1]}}</span></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

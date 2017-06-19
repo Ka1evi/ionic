@@ -1,0 +1,14 @@
+<ion-view view-title="项目列表">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新" on-refresh="refreshProject()"></ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="project in projectList" ng-click="toModule(project.name, project.id)">{{project.name}}
+                <ion-option-button class="button-balanced" ng-click="testResult(project.name, project.id)">测试详情
+                </ion-option-button>
+                <ion-option-button class="button-calm" ng-click="useCaseTemplate(project.id)">用例模板
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+

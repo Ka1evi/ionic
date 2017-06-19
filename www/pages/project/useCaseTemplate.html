@@ -1,0 +1,22 @@
+<ion-view view-title="用例模板">
+    <ion-content on-scroll="getScrollPosition()" delegate-handle="ScrollToTop">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="refreshTemplate()"></ion-refresher>
+        <ion-list>
+            <div ng-repeat="template in templateList">
+                <ion-item ng-click="toggleGroup(template)"
+                          ng-class="{active: isGroupShown(template)}">
+                    <i class="icon" ng-class="isGroupShown(template) ? 'ion-minus' : 'ion-plus'"></i>
+                    &nbsp;{{template.name}}
+                </ion-item>
+                <ion-item class="item-accordion item-text-wrap"
+                          ng-show="isGroupShown(template)">
+                    <p><b>主机IP</b>：{{template.ip}}</p>
+                    <p><b>请求URL</b>：{{template.url}}</p>
+                    <p><b>请求方法</b>：{{template.method}}</p>
+                    <p><b>请求类型</b>：{{template.type}}</p>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+    <div class="scrollToTop" ng-click="scrollTop()"></div>
+</ion-view>

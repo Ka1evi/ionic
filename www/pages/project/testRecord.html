@@ -1,0 +1,22 @@
+<ion-view view-title="执行记录">
+    <ion-content class="padding">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="refreshRecord()"></ion-refresher>
+        <div class="list card" ng-repeat="exec in execInfo">
+            <div class="item item-divider">
+                <p>执行结果</p>
+            </div>
+            <div class="item item-text-wrap">
+                <p><b>用例名称</b></p>
+                <p>{{exec.name}}</p>
+                <p><b>测试结果</b></p>
+                <p>{{exec.result}}</p>
+                <p><b>测试结果说明</b></p>
+                <p ng-if="exec.desc.Succeed">{{exec.desc.Succeed}}</p>
+                <p ng-if="exec.desc.Error">{{exec.desc.Error}}</p>
+            </div>
+            <div class="item item-divider">
+                <p>测试人：{{exec.user}}&emsp;测试时间：{{exec.time}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
